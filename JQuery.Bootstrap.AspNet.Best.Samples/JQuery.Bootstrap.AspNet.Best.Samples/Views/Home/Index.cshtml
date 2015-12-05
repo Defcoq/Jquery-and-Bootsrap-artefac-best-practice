@@ -1,0 +1,30 @@
+﻿@{
+    var url = Request.Url.ToString();
+}
+<h2>Index</h2>
+
+<table class="table table-bordered table-striped" id="tblGrid" border="1" cellpadding="10">
+    <tr>
+        <th>EmployeeID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Title</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td colspan="5"></td>
+    </tr>
+</table>
+
+@section scripts
+{
+    <script src="~/Scripts/Index.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+           // alert('pippppppppppo');
+            var urlVar = @Html.Encode(url);
+           // alert();
+            //console.log('url: ' + @url + 'Fine Url');
+        });
+    </script>
+ }
