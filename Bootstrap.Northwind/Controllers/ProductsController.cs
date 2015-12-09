@@ -1,4 +1,8 @@
-﻿using System;
+﻿using AutoMapper.QueryableExtensions;
+using Bootstrap.Northwind.Models;
+using Northwind.Data.Models;
+using Northwind.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,30 +12,28 @@ namespace Bootstrap.Northwind.Controllers
 {
     public class ProductsController : Controller
     {
-        //private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        //private readonly ICurrentUser _currentUser;
+        private readonly ICurrentUser _currentUser;
 
-        //public ProductsController(ApplicationDbContext context, ICurrentUser currentUser)
+        public ProductsController(ApplicationDbContext context, ICurrentUser currentUser)
 
-        //{
+        {
 
-        //    _context = context;
+            _context = context;
 
-        //    _currentUser = currentUser;
+            _currentUser = currentUser;
 
-        //}
+        }
 
-        //public ActionResult Index()
+        public ActionResult Index()
 
-        //{
+        {
 
-        //    var models = _context.Products.Project().
+            var models = _context.Products.Project().To<ProductViewModel>().ToArray();
 
-        //    To<ProductViewModel>().ToArray();
+            return View(models);
 
-        //    return View(models);
-
-        //}
+        }
     }
 }
