@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
-
+// As implemented by Matt Honeycutt's FailTracker project: https://github.com/MattHoneycutt/Fail-Tracker
 namespace Northwind.Infrastructure.Alerts
 {
     public static class AlertExtensions

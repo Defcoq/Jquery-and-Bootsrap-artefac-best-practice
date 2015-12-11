@@ -18,7 +18,7 @@ namespace Northwind.Infrastructure.Registries
             SetAllProperties(x =>
                 x.Matching(p =>
                     p.DeclaringType.CanBeCastTo(typeof(ActionFilterAttribute)) &&
-                    p.DeclaringType.Namespace.StartsWith("Northwind") &&
+                    p.DeclaringType.Namespace.Contains("Northwind") &&
                     !p.DeclaringType.IsPrimitive && p.PropertyType != typeof(string)));
         }
     }

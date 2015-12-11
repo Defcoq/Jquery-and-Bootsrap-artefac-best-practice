@@ -11,7 +11,7 @@ namespace Northwind.Infrastructure.Registries
             Scan(scan =>
             {
                 scan.AssembliesFromApplicationBaseDirectory(
-                    a => a.FullName.StartsWith("Northwind"));
+                    a => a.FullName.Contains("Northwind"));
                 scan.AddAllTypesOf<IRunAtInit>();
                 scan.AddAllTypesOf<IRunAtStartup>();
                 scan.AddAllTypesOf<IRunOnEachRequest>();

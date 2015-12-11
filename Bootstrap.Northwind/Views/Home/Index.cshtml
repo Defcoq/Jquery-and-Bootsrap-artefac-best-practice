@@ -1,8 +1,75 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@{
+    ViewBag.Title = "Home Page";
 }
+<div class="container-full">
+    <div id="myCarousel" class="carousel" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="@Url.Content("~/Images/slide1.jpg")" alt="First slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Unto all said together great in image.</h1>
+                        <p>Won't saw light to void brought fifth was brought god abundantly for you waters life seasons he after replenish beast. Creepeth beginning.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Images/slide2.jpg")" alt="Second slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Fowl, land him sixth moving.</h1>
+                        <p>Morning wherein which. Fourth man life saying own creeping. Said sixth given.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="@Url.Content("~/Images/slide3.jpg")" alt="Third slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Far far away, behind the word mountains.</h1>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">See all</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+</div>
 
-<h2>Index</h2>
-
+<div class="container">
+    <div class="col-md-4">
+        <h2>A small river named</h2>
+        <p>
+            Duden flows by their place and supplies it with the necessary regelialia.
+            It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+        </p>
+        <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>But nothing the copy</h2>
+        <p>
+            said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed
+            her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for
+            their projects again and again.
+        </p>
+        <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>The Big Oxmox</h2>
+        <p>
+            advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious
+            Semikoli, but the Little Blind Text didn’t listen.
+        </p>
+        <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+    </div>
+</div>

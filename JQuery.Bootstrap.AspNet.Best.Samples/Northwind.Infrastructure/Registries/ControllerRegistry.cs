@@ -12,7 +12,7 @@ namespace Northwind.Infrastructure.Registries
             {
                 scan.TheCallingAssembly();
                 scan.AssembliesFromApplicationBaseDirectory(
-                    a => a.FullName.StartsWith("Northwind")); // Needed if Registries are in different project than website
+                    a => a.FullName.Contains("Northwind")); // Needed if Registries are in different project than website
                 scan.With(new ControllerConvention());
             });
         }
